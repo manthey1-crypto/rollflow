@@ -1,5 +1,10 @@
 /* ===== GLOBAL VISUAL SYSTEM ===== */
     html { scroll-behavior: smooth; }
+    /* Keep in-page anchor targets clear of the 80px sticky header. */
+    section[id] { scroll-margin-top: 6rem; }
+    /* clip avoids creating the overflow scrolling ancestor that breaks iOS sticky. */
+    body { overflow-x: clip; }
+    nav[data-section="navbar"] { background-color: #0B0810; }
     body {
       background:
         radial-gradient(circle at 80% 5%, rgba(91,11,150,.22), transparent 27rem),
